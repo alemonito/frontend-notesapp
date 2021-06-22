@@ -1,1 +1,179 @@
-/* You can add global styles to this file, and also import other style files */
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+
+/*To do list*/
+
+.container{
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+h1{
+    margin-bottom: 40px;
+}
+
+.center{
+    text-align: center;
+}
+
+.flex{
+    display: flex;
+}
+
+input{
+    width: 75%;
+    border: 1px solid #D3D3D3;
+    border-right: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 7px;
+}
+
+input:focus{
+    border: 2px solid #E59866;
+}
+
+.boton{
+    width: 25%;
+    border: none;
+    color: white;
+    background: #E59866 ;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 7px;
+}
+
+.cerrar{
+    width: 10%;
+    border: none;
+    color: white;
+    background: #E59866 ;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 7px;
+}
+
+table{
+    margin-top: 40px;
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+table td, table th{
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+table td:nth-child(2), 
+table td:nth-child(3){
+    cursor: pointer;
+}
+
+.fa-trash{
+    color: #505050;
+    font-size: 18px;
+    display: table-cell !important;
+    text-align: center;
+}
+
+.terminado{
+    color: #28A745;
+    text-decoration: line-through;
+}
+
+.progreso{
+    color: #6682DE;
+}
+
+.por-hacer{
+    color: #DC3545;
+}
+
+/*Paralaxx*/
+
+#parallax h1{
+    font-size: 24px;
+    text-transform: uppercase;
+    color: black;
+    padding: 0;
+    margin: 0;
+}
+
+#parallax h2{
+    font-size: 70px;
+    letter-spacing: 10px;
+    text-align: center;
+    color: white;
+    font-weight: 400;
+    text-transform: uppercase;
+    z-index: 10;
+    opacity: 0.9;
+}
+
+#parallax h3{
+    font-size: 14px;
+    line-height: 0;
+    font-weight: 400;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    color: black;
+}
+
+
+.first-character{
+    font-weight: 400;
+    float: left;
+    font-size: 84px;
+    line-height: 64px;
+    padding-top: 4px;
+    padding-right: 8px;
+    padding-left: 3px;
+}
+
+.sc{
+    color: #3b8595;
+}
+
+#parallax .title{
+    background: white;
+    padding: 35px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#parallax .title h1{
+    font-size: 35px;
+    letter-spacing: 8px;
+}
+
+#parallax .block{
+    background: white;
+    padding: 60px;
+    width: 820px;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+#parallax .parallax-one{
+    padding-top: 100px;
+    padding-bottom: 360px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    background-image: url("assets/img/study.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+
