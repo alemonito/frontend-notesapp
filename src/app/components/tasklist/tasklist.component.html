@@ -5,4 +5,11 @@
       <td class="center">#</td>
     </tr>
 
+    <tr *ngFor="let todo of todos">
+      <td>{{todo.name}}</td>
+      <td>{{todo.status}}</td>
+      <td class="fa fa-trash"></td>
+    </tr>
+
   </table>
+

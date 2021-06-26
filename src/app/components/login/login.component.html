@@ -1,9 +1,11 @@
-<form action="index.html"class="form-box animated fadeInUp">
+<form class="form-box animated fadeInUp" [formGroup]="form" (submit)="login()">
     <h1 class="form-title"> Notes AP</h1>
-    <input type="text" placeholder="Nombre de usuario">
-    <input type="password" placeholder="Contraseña">
+
+
+    <input type="email" placeholder="Email" formControlName="email">
+    <input type="password" placeholder="Contraseña" formControlName="password">
     <button type="submit">
         Login
     </button>
-    <a href="registro.html">registrate</a>
+    <a routerLink="/registro">registrate</a>
 </form>    

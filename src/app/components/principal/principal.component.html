@@ -11,10 +11,10 @@
       <div class="block">
         <div class="container">
           <div class="flex">
-            <input type="text" id="task" placeholder="Enter task">
-            <button class="boton">Submit</button>
+            <input type="text" id="task" placeholder="Enter task" #InputTarea>
+            <button class="boton" (click)="crearTodo()">Submit</button>
           </div>
-          <app-tasklist></app-tasklist>
+          <app-tasklist [todos]=todos></app-tasklist>
         </div>
   
       </div>
