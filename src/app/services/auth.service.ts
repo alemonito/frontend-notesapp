@@ -5,6 +5,7 @@ import { Usuario } from '../interfaces/usuario.interface';
 import { catchError } from 'rxjs/operators';
 import { of } from 'rxjs';
 import { LoginResponse } from 'src/app/interfaces/loginResponse.interface';
+import { Router } from '@angular/router';
 
 interface EmailPass{
   email:string;
@@ -18,7 +19,8 @@ export class AuthService {
 
   url:string = environment.url;
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient,
+    private router: Router) { }
 
   crearUsuario(usuario:Usuario){
     return this.http.post(`${this.url}/usuario`,usuario)
@@ -35,5 +37,10 @@ export class AuthService {
     }else{
       return true;
     }
+  }
+
+  logOut(){
+    localStorage.clear()
+    this.router.navigateByUrl("/login")
   }
 }

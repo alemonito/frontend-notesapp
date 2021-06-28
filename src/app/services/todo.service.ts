@@ -40,5 +40,32 @@ obtenerTodos(id:string){
   return this.http.get<TodoResponse>(`${this.url}/todo/${id}`, {headers:{"Authorization":`Bearer ${token}`}} );
 }
 
+progresoTodo(Id:string|undefined){
+
+  let token = this.verificarStorage();
+  token = token.slice(1,token.length-1)
+  const status = {
+    status: "Progreso"
+  }
+  return this.http.put(`${this.url}/todo/${Id}`, status, {headers:{"Authorization":`Bearer ${token}`}} );
+}
+
+sucessTodo(Id:string|undefined){
+
+  let token = this.verificarStorage();
+  token = token.slice(1,token.length-1)
+  const status = {
+    status: "Completado"
+  }
+  return this.http.put(`${this.url}/todo/${Id}`, status, {headers:{"Authorization":`Bearer ${token}`}} );
+}
+
+deleteTodo(Id:string|undefined){
+
+  let token = this.verificarStorage();
+  token = token.slice(1,token.length-1)
+  return this.http.delete(`${this.url}/todo/${Id}`, {headers:{"Authorization":`Bearer ${token}`}} );
+}
+
 
 }

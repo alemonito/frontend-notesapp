@@ -2,14 +2,19 @@
     <tr>
       <td>Task</td>
       <td>Status</td>
-      <td class="center">#</td>
+      <td class="center">Acciones</td>
     </tr>
 
     <tr *ngFor="let todo of todos">
       <td>{{todo.name}}</td>
-      <td>{{todo.status}}</td>
-      <td class="fa fa-trash"></td>
+      <td [ngClass]="{'por-hacer':todo.status=='Por hacer','progreso':todo.status=='Progreso','terminado':todo.status=='Completado'}">{{todo.status}}</td>
+      <td class="acciones">
+        <i class="far fa-check-circle" (click)="sucessTodo(todo._id,todo)"></i>
+        <i class="fas fa-spinner" (click)="progressTodo(todo._id,todo)"></i>
+        <i class="fa fa-trash" (click)="deleteTodo(todo._id)"></i>
+    </td>
     </tr>
+    
 
   </table>
 

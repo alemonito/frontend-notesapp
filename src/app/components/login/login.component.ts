@@ -20,8 +20,8 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
     this.form = this.formbuilder.group(
       {
-        email:["kesi@to.com", Validators.required],
-        password:["123456", Validators.required]
+        email:["", Validators.required],
+        password:["", Validators.required]
       }
     )
   }
@@ -47,6 +47,14 @@ export class LoginComponent implements OnInit {
       setTimeout(()=>  {
         this.router.navigateByUrl("/")
       }, 1500)
+    }, (error) =>{
+      console.log(error);
+      
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: error.error.message
+      })
     })
   }
 

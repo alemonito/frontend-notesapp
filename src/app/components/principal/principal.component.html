@@ -1,7 +1,7 @@
 <div id="parallax">
     <section>
       <div class="title">
-        <button class="cerrar">Cerrar Sesión</button>
+        <button class="cerrar" (click)="logOut()">Cerrar Sesión</button>
         <h3>NotesApp</h3>
         <H1>Mi To-do List</H1>
       </div> </section> <section>
@@ -14,7 +14,7 @@
             <input type="text" id="task" placeholder="Enter task" #InputTarea>
             <button class="boton" (click)="crearTodo()">Submit</button>
           </div>
-          <app-tasklist [todos]=todos></app-tasklist>
+          <app-tasklist [todos]="todos"></app-tasklist>
         </div>
   
       </div>

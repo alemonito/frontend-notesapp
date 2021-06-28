@@ -1,0 +1,18 @@
+.acciones{
+    display: flex;
+    justify-content: space-between;
+}
+
+.far.fa-check-circle{
+    color: green;
+    font-size: 20px;
+}
+
+.fas.fa-spinner{
+    color: rgb(202, 178, 39);
+    font-size: 20px;
+}
+
+.fa.fa-trash{
+    color: rgb(201, 77, 55);
+}
