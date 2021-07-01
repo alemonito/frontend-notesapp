@@ -9,6 +9,9 @@ import { RegistroComponent } from './components/registro/registro.component';
 import { TasklistComponent } from './components/tasklist/tasklist.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { NgxCaptchaModule } from 'ngx-captcha';
+import { CaptchaComponent } from './components/captcha/captcha.component';
+import { ClimaComponent } from './components/clima/clima.component';
 
 @NgModule({
   declarations: [
@@ -16,12 +19,15 @@ import { HttpClientModule } from '@angular/common/http';
     PrincipalComponent,
     LoginComponent,
     RegistroComponent,
-    TasklistComponent
+    TasklistComponent,
+    CaptchaComponent,
+    ClimaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    NgxCaptchaModule,
     HttpClientModule
   ],
   providers: [],

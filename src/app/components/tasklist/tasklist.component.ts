@@ -11,7 +11,7 @@ import Swal from 'sweetalert2'
 })
 export class TasklistComponent implements OnInit {
 
-  terminado:boolean=true
+  terminado:boolean=false;
 
   @Input() todos:Todo[]=[]
 

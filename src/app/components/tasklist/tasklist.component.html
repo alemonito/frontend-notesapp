@@ -10,7 +10,7 @@
       <td [ngClass]="{'por-hacer':todo.status=='Por hacer','progreso':todo.status=='Progreso','terminado':todo.status=='Completado'}">{{todo.status}}</td>
       <td class="acciones">
         <i class="far fa-check-circle" (click)="sucessTodo(todo._id,todo)"></i>
-        <i class="fas fa-spinner" (click)="progressTodo(todo._id,todo)"></i>
+        <i class="fas fa-spinner" (click)="progressTodo(todo._id,todo)" [ngClass]="{'fa-spin':todo.status=='Progreso'}"></i>
         <i class="fa fa-trash" (click)="deleteTodo(todo._id)"></i>
     </td>
     </tr>
